@@ -1,0 +1,53 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Node jsExpress framework
+		
+		link(rel='stylesheet', href='/css/style.css')
+		link(rel='stylesheet', href='/css/bootstrap.min.css')
+		link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    
+	body
+		nav.navbar.navbar-default.navbar-fixed-top
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+				#navbar.navbar-collapse.collapse
+					.row 
+						.col-md-6(style="z-index:1122")
+							a.navbar-brand(href='/') Home
+							a.navbar-brand(href='/about') About
+							a.navbar-brand(href='/services') Services
+							a.navbar-brand(href='/technology') Technology
+							a.navbar-brand(href='/contact') Contact
+						.col-md-6
+							form.navbar-form(action='http://localhost:3000/search')
+								.input-group(style='width:300px')
+									input.form-control(type='text', name='keyword',  title='Search by Category', placeholder='Search by Category')
+									span.input-group-btn
+										button.btn.btn-primary(type='submit') #[i.fa.fa-search]
+						
+		block content
+    
+	footer.footer.panel-footer
+		.container  
+			a(href='//larc.smu.edu.sg')
+				img.pull-right(src='//research.larc.smu.edu.sg/virality/larc_logo.png')
+			p.text-muted
+				span  &copy Copyright 2017
+				br
+				a(href='//larc.smu.edu.sg') Living Analytics Research Centre
+				br
+				a(href='//www.smu.edu.sg') Singapore Management University
+				br
+
+	script(src='/js/jquery-1.12.4.min.js')
+	script(src='/js/bootstrap.min.js')
+	block script
